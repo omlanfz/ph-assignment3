@@ -59,9 +59,9 @@
       </svg>
 
       <ul class="hidden xl:flex gap-10">
-        <li>Product</li>
-        <li>Services</li>
-        <li>Contact us</li>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact us</a></li>
       </ul>
       <div class="hidden md:flex md:gap-4 lg:gap-8 items-center">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10">
@@ -284,7 +284,7 @@
       </div>
     </section>
 
-    <section class="offers flex justify-center pt-12 md:pt-24 xl:pt-36 pb-72 md:pb-80 xl:pb-96">
+    <section class="offers flex justify-center pt-12 md:pt-24 xl:pt-36 pb-72 sm:pb-96">
       <div class="w-11/12  mb-12 md:mb-24 lg:mb-36">
         <h3 class="font-semibold text-2xl md:text-4xl text-primary mb-8 md:mb-12">Arrival & Offers</h3>
         <div class="card-container poppins-regular text-white flex flex-col lg:flex-row mx-auto gap-5 md:gap-6 ">
@@ -312,9 +312,22 @@
       </div>
     </section>
 
+    <section class="subscribe relative flex justify-center">
+      <div class="absolute -bottom-80 lg:-bottom-96 bg-accent rounded-3xl w-11/12  mb-12 md:mb-24 lg:mb-36 flex flex-col items-center justify-center md:flex-row py-8 md:py-10 lg:py-14 px-7 md:px-14 lg:px-24 gap-6 lg:gap-32">
+        <div><img src="c2-assets/vegetable-busket.png" alt=""></div>
+        <div class="flex flex-col gap-4 items-center md:items-start md:gap-8">
+          <h2 class="text-primary md:text-secondary font-bold md:font-semibold text-2xl md:text-4xl">Get Grocery News!</h2>
+          <p class="md:text-xl">Exclusive training tips, ticks, product deals and more.</p>
+          <input class="size-full rounded-md p-5 md:p-8 md:placeholder:text-xl" placeholder="Enter email...." type="email" name="email" id="email">
+          <div>
+            <button class="text-white bg-primary py-3 px-10 rounded-xl md:text-xl">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main>
-  <footer class="bg-primary text-white pt-72 md:pt-80 xl:pt-96 pb-12 md:pb-24 xl:pb-36">
+  <footer class="bg-primary text-white pt-72 sm:pt-96 pb-12 md:pb-24 xl:pb-36">
     <div class="w-11/12 mx-auto mb-12 md:mb-24 lg:mb-36 flex flex-col md:flex-row gap-9 md:items-center justify-between">
       <div>
         <img src="c2-assets/logo-footer.png" alt="logo-footer">
