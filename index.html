@@ -30,6 +30,51 @@
       font-weight: 400;
       font-style: normal;
     }
+
+    button {
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      ;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    a {
+      transition: transform 0.1s ease, color 0.2s ease;
+    }
+
+    a:hover {
+      transform: scale(1.05);
+      color: rgba(23, 152, 0, 1);
+    }
+
+
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      animation: hoverFloat 0.5s ease-in-out forwards;
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Keyframes for Hover Effect */
+    @keyframes hoverFloat {
+      0% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-6px);
+      }
+
+      100% {
+        transform: translateY(-4px);
+      }
+    }
   </style>
   <!-- Tailwind cdn -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -64,15 +109,19 @@
         <li><a href="contact.html">Contact us</a></li>
       </ul>
       <div class="hidden md:flex md:gap-4 lg:gap-8 items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10">
-          <path fill-rule="evenodd"
-            d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z"
-            clip-rule="evenodd" />
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10">
-          <path
-            d="M2.25 2.25a.75.75 0 0 0 0 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 0 0-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 0 0 0-1.5H5.378A2.25 2.25 0 0 1 7.5 15h11.218a.75.75 0 0 0 .674-.421 60.358 60.358 0 0 0 2.96-7.228.75.75 0 0 0-.525-.965A60.864 60.864 0 0 0 5.68 4.509l-.232-.867A1.875 1.875 0 0 0 3.636 2.25H2.25ZM3.75 20.25a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM16.5 20.25a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z" />
-        </svg>
+        <button>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10">
+            <path fill-rule="evenodd"
+              d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z"
+              clip-rule="evenodd" />
+          </svg>
+        </button>
+        <button>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10">
+            <path
+              d="M2.25 2.25a.75.75 0 0 0 0 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 0 0-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 0 0 0-1.5H5.378A2.25 2.25 0 0 1 7.5 15h11.218a.75.75 0 0 0 .674-.421 60.358 60.358 0 0 0 2.96-7.228.75.75 0 0 0-.525-.965A60.864 60.864 0 0 0 5.68 4.509l-.232-.867A1.875 1.875 0 0 0 3.636 2.25H2.25ZM3.75 20.25a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM16.5 20.25a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z" />
+          </svg>
+        </button>
 
         <button class="py-3 px-10 rounded-xl border-2 border-primary">Login</button>
         <button class="text-white bg-primary py-3 px-10 rounded-xl">Register</button>
@@ -122,7 +171,7 @@
         <h3 class="font-semibold text-2xl md:text-4xl text-primary mb-8 md:mb-12">Popular Products</h3>
         <div class="card-container flex flex-col lg:flex-row gap-6 justify-between">
           <div
-            class="big-card overflow-hidden relative  bg-gradient-to-br from-[#53DB3A] to-white rounded-xl flex flex-col gap-6 p-4 md:p-8 lg:pt-12 lg:pl-9 lg:pr-80 h-[25rem] lg:h-[28rem]">
+            class="big-card card overflow-hidden relative  bg-gradient-to-br from-[#53DB3A] to-white rounded-xl flex flex-col gap-6 p-4 md:p-8 lg:pt-12 lg:pl-9 lg:pr-80 h-[25rem] lg:h-[28rem]">
             <!-- <div class="z-30 absolute bg-[url('c2-assets/vegetable-offer.png')] bg-no-repeat"></div> -->
             <h4 class="adlam-display-regular text-white text-4xl">30% off</h4>
             <p class="text-xl box-border ">Discover a world of treats, toys, and <br> essentials handpicked for </p>
@@ -313,12 +362,15 @@
     </section>
 
     <section class="subscribe relative flex justify-center">
-      <div class="absolute -bottom-80 lg:-bottom-96 bg-accent rounded-3xl w-11/12  mb-12 md:mb-24 lg:mb-36 flex flex-col items-center justify-center md:flex-row py-8 md:py-10 lg:py-14 px-7 md:px-14 lg:px-24 gap-6 lg:gap-32">
+      <div
+        class="absolute -bottom-80 lg:-bottom-96 bg-accent rounded-3xl w-11/12  mb-12 md:mb-24 lg:mb-36 flex flex-col items-center justify-center md:flex-row py-8 md:py-10 lg:py-14 px-7 md:px-14 lg:px-24 gap-6 lg:gap-32">
         <div><img src="c2-assets/vegetable-busket.png" alt=""></div>
         <div class="flex flex-col gap-4 items-center md:items-start md:gap-8">
-          <h2 class="text-primary md:text-secondary font-bold md:font-semibold text-2xl md:text-4xl">Get Grocery News!</h2>
+          <h2 class="text-primary md:text-secondary font-bold md:font-semibold text-2xl md:text-4xl">Get Grocery News!
+          </h2>
           <p class="md:text-xl">Exclusive training tips, ticks, product deals and more.</p>
-          <input class="size-full rounded-md p-5 md:p-8 md:placeholder:text-xl" placeholder="Enter email...." type="email" name="email" id="email">
+          <input class="size-full rounded-md p-5 md:p-8 md:placeholder:text-xl" placeholder="Enter email...."
+            type="email" name="email" id="email">
           <div>
             <button class="text-white bg-primary py-3 px-10 rounded-xl md:text-xl">Subscribe</button>
           </div>
@@ -328,10 +380,12 @@
 
   </main>
   <footer class="bg-primary text-white pt-72 sm:pt-96 pb-12 md:pb-24 xl:pb-36">
-    <div class="w-11/12 mx-auto mb-12 md:mb-24 lg:mb-36 flex flex-col md:flex-row gap-9 md:items-center justify-between">
+    <div
+      class="w-11/12 mx-auto mb-12 md:mb-24 lg:mb-36 flex flex-col md:flex-row gap-9 md:items-center justify-between">
       <div>
         <img src="c2-assets/logo-footer.png" alt="logo-footer">
-        <p class="mt-3 md:text-xl">Discover a world of treats, toys, and <br>essentials handpicked for your furry friends</p>
+        <p class="mt-3 md:text-xl">Discover a world of treats, toys, and <br>essentials handpicked for your furry
+          friends</p>
       </div>
       <div>
         <ul class="flex flex-col gap-5 md:gap-8 md:text-xl">
